@@ -1,0 +1,41 @@
+# Build output
+build/
+out/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+x64/
+x86/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+
+# JetBrains IDEs
+.idea/
+cmake-build-*/
+
+# macOS
+.DS_Store
+*.dSYM/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# JUCE auto-generated (fetched at build time)
+# _deps is inside build/ so already covered
+
+# Distribution zips / installers (add these separately if needed)
+*.zip
+*.exe
+*.dmg
+*.pkg
