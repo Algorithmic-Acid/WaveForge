@@ -155,12 +155,69 @@ Copy `.vst3` from `build/WaveForge_artefacts/Release/VST3/` to:
 - **Frequency Destroyer** — Multiband annihilation
 - **WaveForge** — Wavetable synthesizer
 
+## Contributing
+
+Community contributions are welcome. All changes go through a pull request — **no direct pushes to `main`** are accepted, and every PR requires approval from the maintainer before it can be merged.
+
+### How to submit a PR
+
+1. **Fork** this repository
+2. **Clone** your fork locally
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/WaveForge.git
+   cd WaveForge
+   ```
+3. **Create a branch** — name it something descriptive
+   ```bash
+   git checkout -b fix/filter-click
+   # or
+   git checkout -b feature/lfo-section
+   ```
+4. **Make your changes**, build, and test in a DAW
+   ```bash
+   cmake -B build
+   cmake --build build --config Release --target WaveForge_VST3
+   ```
+5. **Push** your branch to your fork
+   ```bash
+   git push origin fix/filter-click
+   ```
+6. **Open a Pull Request** against `Algorithmic-Acid/WaveForge:main` on GitHub
+
+The PR template will guide you through what to fill in. Once submitted, it goes into a review queue — only the maintainer (@DynamicMushroom) can approve and merge.
+
+### PR rules
+
+- One clear purpose per PR — don't bundle unrelated changes
+- Must build without errors
+- Must be tested in at least one DAW
+- Describe *why* the change is needed, not just what it does
+- Stale approvals are dismissed automatically if you push new commits after approval
+
+### What gets accepted
+
+- Bug fixes with a clear reproduction case
+- DSP improvements that don't break existing presets
+- New factory presets (submitted as a preset values table in the PR, not binary files)
+- UI readability/layout improvements
+- Build system or compatibility fixes
+
+### What won't be accepted
+
+- Breaking changes to the parameter IDs (saves existing DAW sessions)
+- New external dependencies beyond JUCE
+- Features that significantly bloat the plugin scope
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full build guide.
+
+---
+
 ## License
 
-MIT License
+MIT — free to use, modify, and distribute. See [LICENSE](LICENSE).
 
 ## Credits
 
-Created by VoidVendor  
-Built with [JUCE](https://juce.com/)  
-Inspired by classic wavetable synths like PPG Wave, Waldorf, and Serum
+Created by VoidVendor
+Built with [JUCE 8](https://juce.com/)
+Inspired by PPG Wave, Waldorf, and Serum
